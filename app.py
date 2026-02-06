@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+from sklearn.metrics import matthews_corrcoef
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
@@ -63,7 +64,8 @@ if uploaded_file is not None:
     rec = recall_score(y_test, y_pred)
     f1 = f1_score(y_test, y_pred)
     auc = roc_auc_score(y_test, y_prob)
-
+    mcc = matthews_corrcoef(y_test, y_pred)
+    
     st.subheader("Evaluation Metrics")
 
     st.write("Accuracy:", round(acc,3))
@@ -71,6 +73,7 @@ if uploaded_file is not None:
     st.write("Precision:", round(prec,3))
     st.write("Recall:", round(rec,3))
     st.write("F1 Score:", round(f1,3))
+    st.write("MCC:", round(mcc,3))
 
     # ================= Confusion Matrix =================
     st.subheader("Confusion Matrix")
@@ -83,3 +86,4 @@ if uploaded_file is not None:
 
 else:
     st.info("Please upload CSV file to continue.")
+
