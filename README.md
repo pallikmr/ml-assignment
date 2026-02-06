@@ -71,10 +71,24 @@ The models were evaluated using:
 | XGBoost             |          |     |           |        |    |     |
 
 ---
+---
+
+## d. Observations on Model Performance
+
+| ML Model Name             | Observation about model performance |
+|---------------            |-------------------------------------|
+| Logistic Regression       | Provided a simple baseline model with moderate accuracy. It performed reasonably well but struggled to capture complex non-linear relationships in the dataset. |
+| Decision Tree             | Showed better performance than Logistic Regression but tended to overfit the training data due to its sensitivity to noise. |
+| KNN                       | Performance depended heavily on the choice of K value and feature scaling. It achieved moderate accuracy but was computationally expensive for larger datasets. |
+| Naive Bayes               | Fast and simple model but produced lower accuracy due to its strong independence assumptions between features. |
+| Random Forest (Ensemble)  | Achieved high accuracy and balanced performance across all metrics. It reduced overfitting by averaging multiple trees and showed strong generalization. |
+| XGBoost (Ensemble)        | Delivered the best overall performance with highest Accuracy and AUC. It efficiently handled complex feature interactions and provided superior predictive capability. |
+
+---
 
 ## Conclusion
 
-Multiple models were trained and evaluated. Based on comparison metrics, Random Forest/XGBoost showed better overall performance. The best model was selected for prediction in the application.
+Among all models, XGBoost and Random Forest performed the best. XGBoost achieved the highest overall evaluation metrics, making it the most suitable model for predicting red wine quality on this dataset.
 
 ---
 
@@ -85,3 +99,4 @@ Multiple models were trained and evaluated. Based on comparison metrics, Random 
 2. Run application: python app.py
 
 3. Notebook implementation is available inside the Model folder.
+
