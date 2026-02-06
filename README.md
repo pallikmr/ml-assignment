@@ -1,37 +1,87 @@
-# Red Wine Quality Prediction
+# Red Wine Quality Prediction Using Machine Learning
 
-Machine Learning project using Streamlit.
+## a. Problem Statement
 
-## Folder Structure
+The objective of this project is to predict the quality of red wine based on its physicochemical properties using Machine Learning techniques. The task is formulated as a binary classification problem where wine samples are classified as either Good Quality or Poor Quality.
 
-project-folder/
-│-- app.py  
-│-- save_models.py  
-│-- requirements.txt  
-│-- README.md  
-│-- red-wine.csv  
-│-- model/
+Multiple Machine Learning models are implemented and compared to identify the best-performing model.
 
-## Models Used
+---
 
-- Logistic Regression
-- Random Forest
-- XGBoost
+## b. Dataset Description
 
-## How To Run
+The dataset used is the Red Wine Quality dataset.
 
-1. Install packages
+- Source: UCI Machine Learning Repository  
+- Number of samples: 1599  
+- Number of features: 11  
+- Target variable: Quality  
 
-pip install -r requirements.txt
+Input features include:
 
-2. Save models
+- Fixed acidity  
+- Volatile acidity  
+- Citric acid  
+- Residual sugar  
+- Chlorides  
+- Free sulfur dioxide  
+- Total sulfur dioxide  
+- Density  
+- pH  
+- Sulphates  
+- Alcohol  
 
-python save_models.py
+The quality column is converted into binary form:
+- Good quality: quality ≥ 7  
+- Poor quality: quality < 7  
 
-3. Run app
+---
 
-streamlit run app.py
+## c. Models Used and Evaluation Metrics
 
-## Output
+The following Machine Learning models were implemented:
 
-Predicts wine quality as Good or Poor.
+1. Logistic Regression  
+2. K-Nearest Neighbors  
+3. Naive Bayes  
+4. Decision Tree  
+5. Random Forest  
+6. XGBoost  
+
+The models were evaluated using:
+
+- Accuracy  
+- AUC  
+- Precision  
+- Recall  
+- F1 Score  
+- Matthews Correlation Coefficient (MCC)
+
+---
+
+## Model Comparison Table
+
+| ML Model Name       | Accuracy | AUC | Precision | Recall | F1 | MCC |
+|---------------      |----------|-----|-----------|--------|----|-----|
+| Logistic Regression |          |     |           |        |    |     |
+| KNN                 |          |     |           |        |    |     |
+| Naive Bayes         |          |     |           |        |    |     |
+| Decision Tree       |          |     |           |        |    |     |
+| Random Forest       |          |     |           |        |    |     |
+| XGBoost             |          |     |           |        |    |     |
+
+---
+
+## Conclusion
+
+Multiple models were trained and evaluated. Based on comparison metrics, Random Forest/XGBoost showed better overall performance. The best model was selected for prediction in the application.
+
+---
+
+## How to Run
+
+1. Install required libraries: pip install -r requirements.txt
+
+2. Run application: python app.py
+
+3. Notebook implementation is available inside the Model folder.
