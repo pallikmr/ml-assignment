@@ -63,12 +63,12 @@ The models were evaluated using:
 
 | ML Model Name       | Accuracy | AUC | Precision | Recall | F1 | MCC |
 |---------------      |----------|-----|-----------|--------|----|-----|
-| Logistic Regression |          |     |           |        |    |     |
-| KNN                 |          |     |           |        |    |     |
-| Naive Bayes         |          |     |           |        |    |     |
-| Decision Tree       |          |     |           |        |    |     |
-| Random Forest       |          |     |           |        |    |     |
-| XGBoost             |          |     |           |        |    |     |
+| Logistic Regression |   0.866  |  0.887   |  0.591         |   0.277     |  0.377  |     |
+| KNN                 |   0.878  |  0.845   |   0.633        |    0.404    |  0.494  |     |
+| Naive Bayes         |  0.847      | 0.86    |  0.487         |  0.787      | 0.602   |     |
+| Decision Tree       | 0.878         |  0.752   |   0.587        | 0.574       |  0.581  |     |
+| Random Forest       |  0.9        |   0.943  |    0.727       | 0.511       |  0.6  |     |
+| XGBoost             | 0.903         |  0.94   |  0.7         |  0.596      | 0.644   |     |
 
 ---
 ---
@@ -99,4 +99,5 @@ Among all models, XGBoost and Random Forest performed the best. XGBoost achieved
 2. Run application: python app.py
 
 3. Notebook implementation is available inside the Model folder.
+
 
